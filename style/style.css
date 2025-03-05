@@ -26,12 +26,16 @@ li{
 button, input{
     outline: none;
     border: none;
+    cursor: pointer;
+    background: transparent;
 }
 h1,h2,h3,h4,h5,h6{
     font-family: DMSerifDisplay;
+    color: var(--hTagsColor)
 }
-p,span{
+p,a,span{
     font-family: Jost;
+    color: var(--pTagsColor);
 }
 .container{
     max-width: 1220px;
@@ -42,7 +46,307 @@ p,span{
 :root{
     --mainColor: #CDA274;
     --secondColor: ##F4F0EC;
-    --hTegsColor: #292F36
+    --hTagsColor: #292F36;
     --pTagsColor: #4D5053;
     --buttonColor: #292F36;
+}
+
+
+/* header  */
+header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: #fff;
+    border-bottom: 1px solid #999;
+}
+.navbar{
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbarLogo{
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+.navbarLogo .navbar__logo-text{
+    font-size: 38px;
+    color: var(--hTagsColor);
+}
+.navCollaction{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    font-size: 19px;
+}
+.navItem a:hover{
+    color: var(--mainColor);
+}
+.navAction{
+    color: var(--mainColor);
+}
+
+
+/* hero  */
+.hero{
+    min-height: 831px;
+    width: 100%;
+    height: 100%;
+    background: url("../images/section1img.png") no-repeat center;
+}
+.heroWrapper{
+    height: 831px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+.heroTitle{
+    max-width: auto;
+    width: 100%;
+    font-size: 80px;
+    margin-bottom: 19px;
+    line-height: 1.1;
+    font-weight: 400;
+}
+.heroDesc{
+    max-width: 500px;
+    width: 100%;
+    font-size: 22px;
+    line-height: 1.6;
+}
+.heroBtn{
+    padding: 22px 34px;
+    background: var(--buttonColor);
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+    margin-top: 35px;
+    font-size: 18px;
+    transition: .3s;
+}
+.heroBtn:hover{
+    background: var(--mainColor);
+}
+.heroBtn:active{
+    background: var(--buttonColor);
+}
+
+
+/* view  */
+.viewWrapper{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.viewCard{
+    max-width: 33.33%;
+    width: 100%;
+    height: 395px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 41px;
+    text-align: center;
+}
+.viewCard__title{
+    font-size: 25px;
+    font-weight: 400;
+}
+.viewCard__desc{
+    font-size: 22px;
+    margin-top: 17px;
+}
+.viewCard__btn{
+    margin-top: 48px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 18px;
+}
+.viewCard__btn span{
+    transition: .5s;
+}
+.viewCard__btn span:hover{
+    color: var(--mainColor);
+}
+.viewCard__btn span:active{
+    color: var(--pTagsColor);
+}
+
+
+/* callus */
+.callusWrapper{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+.callusDesc, .callusImg{
+    width: 50%;
+}
+.callusDesc{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.callusDesc__title{
+    max-width: 500px;
+    width: 100%;
+    font-size: 50px;
+    font-weight: 400;
+}
+.callusDesc__text{
+    max-width: 500px;
+    margin-top: 42px;
+    width: 100%;
+    font-size: 22px;
+    line-height: 1.6;
+}
+.callusDesc__call{
+    margin-top: 29px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.callusDesc__btn{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--buttonColor);
+    width: 265px;
+    height: 71px;
+    gap: 10px;
+    border-radius: 30px;
+}
+.callusDesc__btn span{
+    color: #fff;
+    font-size: 18px;
+}
+.callusDesc__btn:hover{
+    background: var(--mainColor);
+}
+.callusDesc__btn:active{
+    background: var(--buttonColor);
+}
+
+
+@media (max-width: 990px) {
+    /* viewcard  */
+    .viewWrapper{
+        margin-top: 0px;
+    }
+    .viewCard{
+        height: 350px;
+    }
+    .viewCard{
+        max-width: 50%;
+    }
+
+    /* callus  */
+    .callusWrapper{
+        margin-top: 20px;
+    }
+    .callusDesc__title{
+        font-size: 32px;
+    }
+    .callusDesc__text{
+        max-width: 500px;
+        margin-top: 18px;
+        font-size: 18px;
+        line-height: 1.2;
+    }
+    .callusDesc__call{
+        margin-top: 18px;
+    }
+    .callusDesc__btn{
+        margin-top: 20px;
+        width: 265px;
+        height: 71px;
+        gap: 10px;
+        border-radius: 30px;
+    }
+    .callusDesc__btn span{
+        color: #fff;
+        font-size: 18px;
+    }
+}
+
+
+@media (max-width: 700px) {
+    /* header  */
+    .navCollaction{
+        display: none;
+    }
+    .navbarLogo{
+        margin: 0 auto;
+    }
+    
+    /* view  */
+    .viewWrapper{
+        margin-top: 30px;
+    }
+    .viewCard{
+        height: 300px;
+    }
+
+    /* callus  */
+    .callusWrapper{
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        text-align: center;
+    }
+    .callusDesc, .callusImg{
+        width: 100%;
+    }
+    .callusDesc{
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+@media (max-width: 500px) {
+    /* hero  */
+    .heroTitle{
+        font-size: 48px;
+    }
+    .heroDesc{
+        font-size: 18px;
+    }
+
+    /* viewcard  */
+    .viewWrapper{
+        margin-top: 0px
+    }
+    .viewCard{
+        max-width: 100%;
+    }
+
+    /* callus  */
+    .callusWrapper{
+        margin-top: 70px;
+    }
+}
+
+
+@media (max-width: 400px) {
+    /* hero  */
+    .heroTitle{
+        font-size: 40px;
+    }
+    .heroDesc{
+        font-size: 16px;
+        line-height: 1.2;
+    }
 }
