@@ -107,6 +107,10 @@ header{
     align-items: center;
     gap: 40px;
     font-size: 19px;
+    transition: .3s;
+}
+.navItem a{
+    transition: .3s;
 }
 .navItem a:hover{
     color: var(--mainColor);
