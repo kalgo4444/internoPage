@@ -155,6 +155,7 @@ header{
 }
 .heroBtn:hover{
     background: var(--mainColor);
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 .heroBtn:active{
     background: var(--buttonColor);
@@ -178,6 +179,11 @@ header{
     align-items: center;
     padding: 0 41px;
     text-align: center;
+    border-radius: 50%;
+    transition: .5s;
+}
+.viewCard:hover{
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 .viewCard__title{
     font-size: 25px;
@@ -238,6 +244,13 @@ header{
     align-items: center;
     gap: 20px;
 }
+.callusDesc__call img{
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    border-radius: 50%;
+}
+.callusDesc__call span{
+    font-size: 24px;
+}
 .callusDesc__btn{
     margin-top: 50px;
     display: flex;
@@ -248,6 +261,9 @@ header{
     height: 71px;
     gap: 10px;
     border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    transition: .5s;
+
 }
 .callusDesc__btn span{
     color: #fff;
@@ -255,9 +271,14 @@ header{
 }
 .callusDesc__btn:hover{
     background: var(--mainColor);
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 .callusDesc__btn:active{
     background: var(--buttonColor);
+}
+.callusImg img{
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    border-radius: 0 330px 0 130px;
 }
 
 
@@ -271,6 +292,10 @@ header{
     height: 100%;
     background: var(--secondColor);
     padding-top: 103px;
+    transition: .3s;
+}
+.aboutusWrapper:hover{
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 .aboutusTitle{
     font-size: 45px;
@@ -298,6 +323,11 @@ header{
     flex-direction: column;
     justify-content: center;
     padding: 0 35px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.aboutusCardImg img{
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    border-radius: 50%;
 }
 .aboutusCardTitle{
     display: flex;
@@ -359,7 +389,7 @@ header{
     margin-top: 70px;
     max-width: 1220px;
     width: 100%;
-    min-height: 1632px;
+    /* min-height: 1632px; */
     height: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -388,6 +418,47 @@ header{
 }
 .servicesCardDesc__title span{
     font-size: 22px;
+}
+.servicesCardDesc__btn{
+    transition: .2s;
+}
+.servicesCardDesc__btn:active{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 50%;
+}
+
+/* experiance */
+.experiance{
+    margin-top: 79px;
+    background: var(--secondColor);
+    height: 100%;
+}
+.experianceWrapper{
+    min-height: 475px;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+.experianceCard{
+    max-width: calc(25% - 21.33px);
+}
+.experianceCard.cardborder1{
+    border-right: 1px solid var(--mainColor);
+}
+.experianceCard.cardborder2{
+    border-right: 1px solid var(--mainColor);
+}
+.experianceCard.cardborder3{
+    border-right: 1px solid var(--mainColor);
+}
+
+
+/* pages  */
+.pagesWrapper{
+    min-height: 1343px;
 }
 
 
@@ -456,6 +527,18 @@ header{
     /* services */
     .servicesCard{
         box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    }
+
+    /* experiance  */
+    .experianceWrapper{
+        min-height: 600px;
+        height: 100%;
+    }
+    .experianceCard{
+        max-width: calc(50% - 32px);
+    }
+    .experianceCard.cardborder2{
+        border-right: none;
     }
 }
 
@@ -530,6 +613,9 @@ header{
     }
 
     /* brands  */
+    .brandsWrapper{
+        margin-top: 70px;
+    }
     .brandsImgs{
         max-width: 100%;
     }
@@ -543,7 +629,32 @@ header{
         max-width: 100%;
         box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     }
+
+    /* experiance  */
+    .experianceWrapper{
+        min-height: 1000px;
+        height: 100%;
+    }
+    .experianceCard{
+        max-width: 100%;
+    }
+    .experianceCard.cardborder1{
+        border-right: none;
+        border-bottom: 1px solid var(--mainColor);
+    }
+    .experianceCard.cardborder2{
+        border-right: none;
+        border-bottom: 1px solid var(--mainColor);
+    }
+    .experianceCard.cardborder3{
+        border-right: none;
+        border-bottom: 1px solid var(--mainColor);
+    }
 }
+
+
+
+
 
 
 @media (max-width: 400px) {
