@@ -458,7 +458,75 @@ header{
 
 /* pages  */
 .pagesWrapper{
-    min-height: 1343px;
+    margin-top: 130px;
+    /* min-height: 1343px; */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.pagesTitle{
+    max-width: 274px;
+    width: 100%;
+    margin-top: 12px;
+    font-weight: 400;
+    font-size: 48px;
+}
+.pagesDesc{
+    margin-top: 20px;
+    max-width: 589px;
+    width: 100%;
+    font-size: 22px;
+    text-align: center;
+}
+.pagesCardsWrapper{
+    margin-top: 70px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: center;
+    align-content: start;
+    gap: 30px;
+}
+.pagesCard{
+    max-width: calc(33.33% - 45px);
+    width: 100%;
+    border: 1px solid #E7E7E7;
+    border-radius: 62px;
+    padding: 21px 21px 21px;
+}
+.pagesCardHead{
+    position: relative;
+}
+.pagesImgInItem{
+    position: absolute;
+    left: 24px;
+    bottom: 29px;
+    background: #fff;
+    padding: 10px 9px;
+    border-radius: 10px;
+}
+.pagesCardDesc{
+    margin-top: 14px;
+}
+.pagesCardDesc h3{
+    font-weight: 400;
+    font-size: 24px;
+}
+.pagesCardBtn{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.pagesCardBtn button img{
+    transition: .3s;
+}
+.pagesCardBtn button img:active{
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    border-radius: 50%;
 }
 
 
@@ -539,6 +607,17 @@ header{
     }
     .experianceCard.cardborder2{
         border-right: none;
+    }
+
+    /* pages  */
+    .pagesWrapper{
+        margin-top: 70px;
+    }
+    .pagesCardsWrapper{
+        margin-top: 50px;
+    }
+    .pagesCard{
+        max-width: calc(50% - 30px);
     }
 }
 
@@ -649,6 +728,17 @@ header{
     .experianceCard.cardborder3{
         border-right: none;
         border-bottom: 1px solid var(--mainColor);
+    }
+
+    /* pages  */
+    .pagesWrapper{
+        margin-top: 70px;
+    }
+    .pagesCardsWrapper{
+        margin-top: 30px;
+    }
+    .pagesCard{
+        max-width: 100%;
     }
 }
 
