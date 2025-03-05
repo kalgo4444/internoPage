@@ -847,15 +847,17 @@ header{
     }
     .experianceCard.cardborder1{
         border-right: none;
-        border-bottom: 1px solid var(--mainColor);
     }
     .experianceCard.cardborder2{
         border-right: none;
-        border-bottom: 1px solid var(--mainColor);
+        border-top: 1px solid var(--mainColor);
     }
     .experianceCard.cardborder3{
         border-right: none;
-        border-bottom: 1px solid var(--mainColor);
+        border-top: 1px solid var(--mainColor);
+    }
+    .experianceCard.cardborder4{
+        border-top: 1px solid var(--mainColor);
     }
 
     /* pages  */
