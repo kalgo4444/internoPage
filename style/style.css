@@ -529,7 +529,55 @@ header{
     border-radius: 50%;
 }
 
-
+/* contactus  */
+.contactusWrapper{
+    margin-top: 130px;
+    height: 414px;
+    background: #292F36;
+    border-radius: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.contactusTitle, .contactusDesc{
+    color: #fff
+}
+.contactusTitle{
+    max-width: 534px;
+    width: 100%;
+    font-size: 50px;
+    font-weight: 400;
+}
+.contactusDesc{
+    max-width: 371px;
+    width: 100%;
+    margin-top: 9px;
+    font-size: 22px;
+}
+.contactusBtn{
+    margin-top: 52px;
+    background: var(--mainColor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 34px;
+    border-radius: 20px;
+    gap: 30px;
+    transition: .5s;
+}
+.contactusBtn:hover{
+    background: #aa855d;
+}
+.contactusBtn span{
+    color: #fff;
+    font-size: 18px;
+}
+.footerWrapper{
+    margin-top: 80px;
+    height: 608px;
+    border: 1px solid red;
+}
 
 
 
@@ -619,6 +667,11 @@ header{
     .pagesCard{
         max-width: calc(50% - 30px);
     }
+
+    /* constactus  */
+    .contactusWrapper{
+        margin-top: 70px;
+    }
 }
 
 
@@ -655,6 +708,11 @@ header{
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+
+    /* contactus */
+    .contactusWrapper{
+        text-align: center;
     }
 }
 
@@ -740,11 +798,19 @@ header{
     .pagesCard{
         max-width: 100%;
     }
+
+    /* contactus */
+    .contactusWrapper{
+        height: 350px;
+        text-align: center;
+    }
+    .contactusTitle{
+        font-size: 32px;
+    }
+    .contactusDesc{
+        font-size: 18px;
+    }
 }
-
-
-
-
 
 
 @media (max-width: 400px) {
@@ -768,5 +834,18 @@ header{
     }
     .servicesCardDesc__title span{
         font-size: 18px;
+    }
+
+    /* contactus */
+    .contactusWrapper{
+        margin-top: 50px;
+        height: 300px;
+        text-align: center;
+    }
+    .contactusTitle{
+        font-size: 24px;
+    }
+    .contactusDesc{
+        font-size: 16px;
     }
 }
