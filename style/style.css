@@ -45,12 +45,27 @@ p,a,span{
 }
 :root{
     --mainColor: #CDA274;
-    --secondColor: ##F4F0EC;
+    --secondColor: #F4F0EC;
     --hTagsColor: #292F36;
     --pTagsColor: #4D5053;
     --buttonColor: #292F36;
 }
-
+.top{
+    width: 40px;
+    height: 40px;
+    background: #000;
+    border-radius: 50%;
+    display: inline-block;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: .3s;
+    box-shadow: #000 0px 0px 10px;
+}
+.top.hidden{
+    bottom: -60px;
+    right: -60px;
+}
 
 /* header  */
 header{
@@ -61,12 +76,21 @@ header{
     z-index: 1000;
     background: #fff;
     border-bottom: 1px solid #999;
+    transition: .3s;
+}
+.header.shrink{
+    box-shadow: 0 5px 5px #0001;
+    /* backdrop-filter: blur(100px); */
+}
+.header.shrink .navbar{
+    height: 55px;
 }
 .navbar{
     height: 70px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    transition: .3s;
 }
 .navbarLogo{
     display: flex;
@@ -237,6 +261,144 @@ header{
 }
 
 
+/* aboutus  */
+.aboutusWrapper{
+    margin-top: 140px;
+    border-radius: 70px;
+    max-width: 1220px;
+    width: 100%;
+    min-height: 675px;
+    height: 100%;
+    background: var(--secondColor);
+    padding-top: 103px;
+}
+.aboutusTitle{
+    font-size: 45px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 45px;
+}
+.aboutusCardsWrapper{
+    max-width: 1110px;
+    width: 100%;
+    height: 289px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 17px;
+}
+.aboutusCard{
+    max-width: calc(33.33% - 11.33px);
+    width: 100%;
+    height: 287px;
+    background: #fff;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 35px;
+}
+.aboutusCardTitle{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.aboutusCard__title h3{
+    font-size: 25px;
+    font-weight: 400;
+}
+.aboutusCard__title span{
+    font-size: 18px;}
+.aboutusCardDesc{
+    margin-top: 25px;
+}
+.aboutusCardDesc p{
+    font-size: 20px;
+}
+
+/* brands  */
+.brandsWrapper{
+    margin-top: 139px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: start;
+    gap: 125px;
+}
+.brandsImgs{
+    max-width: calc(20% - 100px);
+}
+
+/* services */
+.servicesWrapper{
+    margin-top: 100px;
+    /* min-height: 1865px; */
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.servicesTitle{
+    max-width: 331px;
+    width: 100%;
+    margin-top: 13px;
+    font-weight: 400;
+    font-size: 47px;
+}
+.servicesDesc{
+    max-width: 786px;
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 22px;
+}
+.servicesCardWrapper{
+    margin-top: 70px;
+    max-width: 1220px;
+    width: 100%;
+    min-height: 1632px;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: start;
+    gap: 20px;
+}
+.servicesCard{
+    max-width: calc(50% - 10px);
+    width: 100%;
+    transition: .5s;
+    border-radius: 0 80px 0 0;
+}
+.servicesCard:hover{
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.servicesCardDesc{
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 5px;
+}
+.servicesCardDesc__title h3{
+    font-weight: 400;
+    font-size: 24px;
+}
+.servicesCardDesc__title span{
+    font-size: 22px;
+}
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 990px) {
     /* viewcard  */
     .viewWrapper{
@@ -275,6 +437,25 @@ header{
     .callusDesc__btn span{
         color: #fff;
         font-size: 18px;
+    }
+
+    /* about */
+    .aboutusWrapper{
+        min-height: 900px;
+        padding-top: 60px;
+    }
+    .aboutusCard{
+        max-width: calc(50% - 17px);
+    }
+
+    /* brands  */
+    .brandsImgs{
+        max-width: calc(33.33% - 83.33px);
+    }
+
+    /* services */
+    .servicesCard{
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     }
 }
 
@@ -334,8 +515,33 @@ header{
     }
 
     /* callus  */
+    .aboutusTitle{
+        font-size: 35px;
+    }
     .callusWrapper{
         margin-top: 70px;
+    }
+    /* about  */
+    .aboutusWrapper{
+        min-height: 1150px;
+    }
+    .aboutusCard{
+        max-width: 90%;
+    }
+
+    /* brands  */
+    .brandsImgs{
+        max-width: 100%;
+    }
+
+    /* serviseces  */
+    .servicesCardWrapper{
+        display: flex;
+        flex-direction: column;
+    }
+    .servicesCard{
+        max-width: 100%;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     }
 }
 
@@ -348,5 +554,18 @@ header{
     .heroDesc{
         font-size: 16px;
         line-height: 1.2;
+    }
+
+    /* brands  */
+    .brandsImgs{
+        max-width: 100%;
+    }
+
+    /* services  */
+    .servicesCardDesc__title h3{
+        font-size: 20px;
+    }
+    .servicesCardDesc__title span{
+        font-size: 18px;
     }
 }
