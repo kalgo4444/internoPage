@@ -21,6 +21,7 @@ a{
     text-decoration: none;
 }
 li{
+    color: inherit;
     list-style: none;
 }
 button, input{
@@ -573,10 +574,51 @@ header{
     color: #fff;
     font-size: 18px;
 }
+
+/* footer  */
 .footerWrapper{
     margin-top: 80px;
-    height: 608px;
-    border: 1px solid red;
+    padding-bottom: 20px;
+}
+.footerLinkss{
+    display: flex;
+    justify-content: space-between;
+}
+.footerTitle .footerDesc{
+    margin-top: 15px;
+    max-width: 326px;
+    width: 100%;
+    font-size: 22px;
+}
+.footerSocialLogo{
+    margin-top: 29px;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+.footerSocialLogo img{
+    cursor: pointer;
+}
+.footerLinkColm{
+    margin-top: 25px;
+    font-size: 22px;
+}
+.footerLinkColm1{
+    transition: .3s;
+}
+.footerLinkColm1:hover{
+    color: var(--mainColor)
+}
+.footerLinkColm1:active{
+    color: var(--hTagsColor);
+}
+.footerThemeLink p{
+    margin-top: 0px;
+    cursor: default;
+    font-size: 25px;
+    font-weight: 400;
+    font-family: DMSerifDisplay;
+    color: var(--hTagsColor);
 }
 
 
@@ -672,6 +714,18 @@ header{
     .contactusWrapper{
         margin-top: 70px;
     }
+
+    /* footer  */
+    .footerTitle .footerDesc{
+        margin-top: 15px;
+        max-width: 200px;
+        width: 100%;
+        font-size: 16px;
+    }
+    .footerLinkColm{
+        margin-top: 25px;
+        font-size: 16px;
+    }
 }
 
 
@@ -713,6 +767,18 @@ header{
     /* contactus */
     .contactusWrapper{
         text-align: center;
+    }
+
+    /* footer  */
+    .footerTitle .footerDesc{
+        margin-top: 15px;
+        max-width: 200px;
+        width: 100%;
+        font-size: 12px;
+    }
+    .footerLinkColm{
+        margin-top: 25px;
+        font-size: 12px;
     }
 }
 
@@ -809,6 +875,45 @@ header{
     }
     .contactusDesc{
         font-size: 18px;
+    }
+
+    /* footer  */
+    .footerWrapper{
+        margin-top: 50px;
+        height: 100%;
+    }
+    .footerLinkss{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+    .footerTitle img{
+        display: block;
+        margin: 0 auto;
+    }
+    .footerSocialLogo{
+        justify-content: center;
+    }
+    .footerTitle .footerDesc{
+        margin-top: 15px;
+        max-width: 326px;
+        width: 100%;
+        font-size: 22px;
+    }
+    .footerLinkColm{
+        margin-top: 25px;
+        font-size: 22px;
+        text-align: center;
+    }
+    .footerThemeLink p{
+        margin-top: 0px;
+        cursor: default;
+        font-size: 25px;
+        font-weight: 400;
+        font-family: DMSerifDisplay;
+        color: var(--hTagsColor);
+        text-align: center;
     }
 }
 
