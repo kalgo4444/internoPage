@@ -382,6 +382,7 @@ header{
     margin-top: 13px;
     font-weight: 400;
     font-size: 47px;
+    text-align: center;
 }
 .servicesDesc{
     max-width: 786px;
@@ -933,6 +934,29 @@ header{
         font-size: 16px;
         line-height: 1.2;
     }
+    /* view  */
+    .viewWrapper{
+        margin-top: 40px;
+    }
+    /* about  */
+    .aboutusWrapper{
+        min-height: 1120px;
+        height: 100%;
+    }
+    .aboutusTitle{
+        font-size: 28px;
+    }
+    .aboutusCard__title h3{
+        font-size: 20px;
+    }
+    .aboutusCard__title span{
+        font-size: 16px;
+    }
+
+    /* callus  */
+    .callusDesc__call span{
+        font-size: 18px;
+    }
 
     /* brands  */
     .brandsImgs{
@@ -940,6 +964,9 @@ header{
     }
 
     /* services  */
+    .servicesTitle{
+        font-size: 40px;
+    }
     .servicesCardDesc__title h3{
         font-size: 20px;
     }
